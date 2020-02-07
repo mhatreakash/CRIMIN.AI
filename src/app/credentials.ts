@@ -1,10 +1,10 @@
 export const firebaseConfig = {
-    apiKey: 'AIzaSyDL3U13RurMr4dyhdZnOp9me2AMixPQg-s',
-    authDomain: 'crime-bot.firebaseapp.com',
-    databaseURL: 'https://crime-bot.firebaseio.com',
-    projectId: 'crime-bot',
-    storageBucket: 'crime-bot.appspot.com',
-    messagingSenderId: '402235643741',
-    appId: '1:402235643741:web:d8c6bca590dc9ddb97bab4',
-    measurementId: 'G-KDVL3WY6RT'
-  };
+  apiKey: "AIzaSyC7S6KG6fR8eN6mv0c2lUlsiKDyelwchOs",
+  authDomain: "crime-bot-ai.firebaseapp.com",
+  databaseURL: "https://crime-bot-ai.firebaseio.com",
+  projectId: "crime-bot-ai",
+  storageBucket: "crime-bot-ai.appspot.com",
+  messagingSenderId: "640197175280",
+  appId: "1:640197175280:web:8e4fefddd117b10e859f35",
+  measurementId: "G-M3E54G67MB"
+};

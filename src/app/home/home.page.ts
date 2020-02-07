@@ -10,7 +10,9 @@ export class HomePage {
   userDoc: any;
 
   constructor(private fireStore: AngularFirestore) {
-    this.userDoc = fireStore.doc<any>('userProfile');
+    fireStore.collection("test").valueChanges().subscribe(data =>{
+      this.userDoc = data;
+    });
   }
 
 }
