@@ -1,14 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>home </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let i of userDoc">
-    <pre>{{i.name}}</pre>
-  </div>
-
+  <ion-grid style="margin-top: 80px;">
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button expand="block" color="medium" (click)="toSignUp1()"
+          >Sign Up</ion-button
+        >
+        <span class="divider line one-line">or</span>
+        <ion-button expand="block" color="primary" style="margin-bottom: 20px;"
+          >Sign up with facebook</ion-button
+        >
+        <ion-button expand="block" color="danger"
+          >Sign Up with google</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
