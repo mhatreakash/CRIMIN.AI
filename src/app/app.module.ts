@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { firebaseConfig } from './credentials';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +24,11 @@ import { firebaseConfig } from './credentials';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule],
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbLayoutModule,
+    NbEvaIconsModule],
   providers: [
     StatusBar,
     SplashScreen,
