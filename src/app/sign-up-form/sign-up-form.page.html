@@ -11,51 +11,26 @@
         <ion-col>
           <ion-list style="margin-right: 10px;">
             <ion-item>
-              <ion-input
-                #usernames="ngModel"
-                [(ngModel)]="username"
-                name="username"
-                type="text"
-                placeholder="Username"
-                required
-                [ngClass]="{'invalid': !usernames.valid && usernames.touched}"
-              ></ion-input>
+              <ion-input #usernames="ngModel" [(ngModel)]="username" name="username" type="text" placeholder="Username"
+                required [ngClass]="{'invalid': !usernames.valid && usernames.touched}"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input
-                type="text"
-                placeholder="Department"
-                name="dept"
-                ngModel
-                required
-              ></ion-input>
+              <ion-input #dept="ngModel" [(ngModel)]="department" type="text" placeholder="Department" name="dept"
+                required [ngClass]="{'invalid': !dept.valid && dept.touched}"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input
-                type="text"
-                placeholder="Email"
-                name="email"
-                ngModel
-                required
-              ></ion-input>
+              <ion-input #email="ngModel" [(ngModel)]="emails" type="text" placeholder="Email" name="email" required
+                email [ngClass]="{'invalid': !email.valid && email.touched}"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input
-                type="password"
-                placeholder="Password"
-                name="password"
-                ngModel
-                required
-              ></ion-input>
+              <ion-input #pass="ngModel" [(ngModel)]="password" type="password" placeholder="Password" name="password"
+                required [ngClass]="{'invalid': !pass.valid && pass.touched}"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input
-                type="password"
-                placeholder="Confirm Password"
-                name="confirmation_password"
-                ngModel
-                required
-              ></ion-input>
+              <ion-input #confirmPass="ngModel" [(ngModel)]="confirmPassword" type="password"
+                placeholder="Confirm Password" name="confirPassword" pattern="{{ pass.value }}"
+                [ngClass]="{'invalid': !confirmPass.valid && confirmPass.touched}" required>
+              </ion-input>
             </ion-item>
           </ion-list>
         </ion-col>
@@ -63,13 +38,8 @@
 
       <ion-row>
         <ion-col class="signup-col">
-          <ion-button
-            expand="block"
-            color="medium"
-            style="letter-spacing: 2px;"
-            (click)="presentAlertConfirm()"
-            >Sign up</ion-button
-          >
+          <ion-button expand="block" color="medium" style="letter-spacing: 2px;" [disabled]="f.invalid">Sign up
+          </ion-button>
         </ion-col>
       </ion-row>
     </form>
