@@ -22,7 +22,5 @@ export class HomePage {
       });
   }
 
-  toSignUp1() {
-    this.NavCtrl.navigateForward("/sign-up");
-  }
+  
 }

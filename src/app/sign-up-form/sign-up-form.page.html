@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card mode="ios" style="margin-top: 30px;">
+    <form #f="ngForm" (ngSubmit)="nextPage()">
+      <ion-row>
+        <ion-col>
+          <ion-list style="margin-right: 10px;">
+            <ion-item>
+              <ion-input
+                #usernames="ngModel"
+                [(ngModel)]="username"
+                name="username"
+                type="text"
+                placeholder="Username"
+                required
+                [ngClass]="{'invalid': !usernames.valid && usernames.touched}"
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                type="text"
+                placeholder="Department"
+                name="dept"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                type="text"
+                placeholder="Email"
+                name="email"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                type="password"
+                placeholder="Password"
+                name="password"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input
+                type="password"
+                placeholder="Confirm Password"
+                name="confirmation_password"
+                ngModel
+                required
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <ion-button
+            expand="block"
+            color="medium"
+            style="letter-spacing: 2px;"
+            (click)="presentAlertConfirm()"
+            >Sign up</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card>
+</ion-content>

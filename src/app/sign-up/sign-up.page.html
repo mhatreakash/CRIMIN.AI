@@ -5,63 +5,20 @@
 </ion-header>
 
 <ion-content>
-  <form style="margin-top: 10px;">
+  <ion-grid style="margin-top: 80px;">
     <ion-row>
-      <ion-col>
-        <ion-list>
-          <ion-item>
-            <ion-input
-              type="text"
-              placeholder="Name"
-              name="name"
-              ngModel
-              required
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input
-              type="text"
-              placeholder="Department"
-              name="dept"
-              ngModel
-              required
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input
-              type="text"
-              placeholder="Email"
-              name="email"
-              ngModel
-              required
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input
-              type="password"
-              placeholder="Password"
-              name="password"
-              ngModel
-              required
-            ></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input
-              type="password"
-              placeholder="Confirm Password"
-              name="confirmation_password"
-              ngModel
-              required
-            ></ion-input>
-          </ion-item>
-        </ion-list>
+      <ion-col align-self-center>
+        <ion-button expand="block" color="medium" (click)="toSignUpForm()"
+          >Sign Up</ion-button
+        >
+        <span class="divider line one-line">or</span>
+        <ion-button expand="block" color="primary" style="margin-bottom: 20px;"
+          >Sign up with facebook</ion-button
+        >
+        <ion-button expand="block" color="danger"
+          >Sign Up with google</ion-button
+        >
       </ion-col>
     </ion-row>
-
-    <ion-row>
-      <ion-col class="signup-col">
-        <ion-button expand="block" color="medium">Sign up</ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
+  </ion-grid>
 </ion-content>

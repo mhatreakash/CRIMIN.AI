@@ -5,20 +5,50 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid style="margin-top: 80px;">
-    <ion-row>
-      <ion-col align-self-center>
-        <ion-button expand="block" color="medium" (click)="toSignUp1()"
-          >Sign Up</ion-button
-        >
-        <span class="divider line one-line">or</span>
-        <ion-button expand="block" color="primary" style="margin-bottom: 20px;"
-          >Sign up with facebook</ion-button
-        >
-        <ion-button expand="block" color="danger"
-          >Sign Up with google</ion-button
-        >
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-card mode="ios">
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h3>Login</h3>
+            </div>
+            <div padding>
+              <ion-item>
+                <ion-input
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  ngModel
+                  required
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                  ngModel
+                  required
+                ></ion-input>
+              </ion-item>
+            </div>
+            <div padding>
+              <ion-button type="submit" color="medium" expand="block"
+                >Login</ion-button
+              >
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              Don't have an account? 
+              <a routerLink="/sign-up"> Sign Up</a>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-card>
 </ion-content>
