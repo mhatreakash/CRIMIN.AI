@@ -9,8 +9,8 @@ import { NavController } from "@ionic/angular";
 })
 export class HomePage {
   userDoc: any;
-  username : string = ""
-  password : string = ""
+  email;
+  password;
 
   constructor(
     private fireStore: AngularFirestore,
@@ -24,5 +24,8 @@ export class HomePage {
       });
   }
 
-  
+  login() {
+    console.log(this.email + this.password);
+  }
+
 }

@@ -7,10 +7,16 @@ import { AlertController, NavController } from "@ionic/angular";
   styleUrls: ["./sign-up-form.page.scss"]
 })
 export class SignUpFormPage implements OnInit {
+  username;
+  department;
+  emails;
+  password;
+  confirmPassword;
+
   constructor(
     public alertController: AlertController,
     public NavCtrl: NavController
-  ) {}
+  ) { }
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
@@ -38,5 +44,9 @@ export class SignUpFormPage implements OnInit {
     await alert.present();
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
+
+  nextPage() {
+
+  }
 }
