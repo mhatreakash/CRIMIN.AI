@@ -9,13 +9,15 @@ import { NavController } from "@ionic/angular";
 })
 export class HomePage {
   userDoc: any;
+  username : string = ""
+  password : string = ""
 
   constructor(
     private fireStore: AngularFirestore,
     public NavCtrl: NavController
   ) {
     fireStore
-      .collection("test")
+      .collection("UserDetails")
       .valueChanges()
       .subscribe(data => {
         this.userDoc = data;

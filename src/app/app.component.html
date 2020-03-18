@@ -1,7 +1,7 @@
 <ion-app>
   <ion-menu contentId="content1">
     <ion-header>
-      <ion-toolbar color="primary">
+      <ion-toolbar color="light">
         <ion-title style="letter-spacing: 1px;">Options</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -9,15 +9,24 @@
       <ion-list style="margin-top: 1rem;">
         <ion-menu-toggle auto-hide="false">
           <ion-item (click)="report()">
-            <ion-icon src="./../assets/icon/document.svg" class="ion-icon-class"></ion-icon>
+            <ion-icon
+              src="./../assets/icon/document.svg"
+              class="ion-icon-class"
+            ></ion-icon>
             <ion-label class="ion-label-class">Report</ion-label>
           </ion-item>
           <ion-item (click)="prevention()">
-            <ion-icon src="./../assets/icon/shield.svg" class="ion-icon-class"></ion-icon>
+            <ion-icon
+              src="./../assets/icon/shield.svg"
+              class="ion-icon-class"
+            ></ion-icon>
             <ion-label class="ion-label-class">Preventions</ion-label>
           </ion-item>
           <ion-item (click)="spotRagging()">
-            <ion-icon src="./../assets/icon/eye.svg" class="ion-icon-class"></ion-icon>
+            <ion-icon
+              src="./../assets/icon/eye.svg"
+              class="ion-icon-class"
+            ></ion-icon>
             <ion-label class="ion-label-class">How to spot ragging</ion-label>
           </ion-item>
         </ion-menu-toggle>
