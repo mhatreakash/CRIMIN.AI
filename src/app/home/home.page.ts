@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { AngularFirestore } from "angularfire2/firestore";
 import { NavController } from "@ionic/angular";
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: "app-home",
@@ -14,7 +15,8 @@ export class HomePage {
 
   constructor(
     private fireStore: AngularFirestore,
-    public NavCtrl: NavController
+    public NavCtrl: NavController,
+    public authService: AuthService
   ) {
     fireStore
       .collection("UserDetails")

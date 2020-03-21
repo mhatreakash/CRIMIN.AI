@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AlertController, NavController } from "@ionic/angular";
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: "app-sign-up-form",
@@ -15,7 +16,8 @@ export class SignUpFormPage implements OnInit {
 
   constructor(
     public alertController: AlertController,
-    public NavCtrl: NavController
+    public NavCtrl: NavController,
+    public authService: AuthService
   ) { }
 
   async presentAlertConfirm() {
