@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +16,7 @@ import { SignUpFormPage } from './sign-up-form.page';
     IonicModule,
     SignUpFormPageRoutingModule
   ],
-  declarations: [SignUpFormPage]
+  declarations: [SignUpFormPage],
+  providers:[AuthService]
 })
 export class SignUpFormPageModule {}
