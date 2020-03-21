@@ -28,7 +28,7 @@ import { AuthService } from "./services/auth.service";
   ],
   providers: [
     AuthService,
-    AngularFirestore,
+    AngularFirestoreModule,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
