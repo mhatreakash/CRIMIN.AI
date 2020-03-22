@@ -36,23 +36,21 @@ export class AuthService {
     return this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(result => {
-        this.ngZone.run(() => {
-          this.router.navigate(["dashboard"]);
-        });
-        this.SetUserData(result.user);
-      })
+        this.router.navigate(["dashboard"]);
       .catch(error => {
         window.alert(error.message);
       });
   }
 
-  SignUp(email, password) {
+  SignUp(email, password, department, username) {
     return this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
       .then(result => {
         /* Call the SendVerificaitonMail() function when new user sign 
             up and returns promise */
-        this.SendVerificationMail();
+        // this.SendVerificationMail();
+        result.user["department"] = department;
+        result.user["username"] = username;
         this.SetUserData(result.user);
       })
       .catch(error => {
@@ -60,11 +58,11 @@ export class AuthService {
       });
   }
 
-  SendVerificationMail() {
-    return this.afAuth.auth.currentUser.sendEmailVerification().then(() => {
-      this.router.navigate(["verify-email-address"]);
-    });
-  }
+  // SendVerificationMail() {
+  //   return this.afAuth.auth.currentUser.sendEmailVerification().then(() => {
+  //     this.router.navigate(["verify-email-address"]);
+  //   });
+  // }
 
   SetUserData(user) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(
@@ -73,9 +71,8 @@ export class AuthService {
     const userData: User = {
       uid: user.uid,
       email: user.email,
-      pass: user.pass,
-      department: user.department,
-      emailVerified: user.emailVerified
+      department:user.department,
+      username:user.username
     };
     return userRef.set(userData, {
       merge: true
@@ -86,9 +83,8 @@ export class AuthService {
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(result => {
-        this.ngZone.run(() => {
-          this.router.navigate(["dashboard"]);
-        });
+        this.router.navigate(["dashboard"]);
+    
         this.SetUserData(result.user);
       })
       .catch(error => {

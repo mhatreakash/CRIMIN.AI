@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-card mode="ios" style="margin-top: 30px;">
-    <form #f="ngForm" (ngSubmit)="nextPage()">
+    <form #f="ngForm">
       <ion-row>
         <ion-col>
           <ion-list style="margin-right: 10px;">
@@ -79,7 +79,7 @@
             color="medium"
             style="letter-spacing: 2px;"
             [disabled]="f.invalid"
-            (click)="authService.SignUp(email.value, pass.value,dept.value)"
+            (click)="signUp()"
             >Sign up
           </ion-button>
         </ion-col>

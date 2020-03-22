@@ -1,7 +1,6 @@
 export interface User {
-    uid: string;
-   email: string;
-   pass: string;
-   department: string;
-   emailVerified: boolean;
+  uid: string;
+  email: string;
+  department:string;
+  username:string;
 }

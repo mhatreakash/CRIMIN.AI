@@ -1,7 +1,10 @@
 import { Component } from "@angular/core";
-import { AngularFirestore } from '@angular/fire/firestore';
+import {
+  AngularFirestore,
+  AngularFirestoreModule
+} from "@angular/fire/firestore";
 import { NavController } from "@ionic/angular";
-import { AuthService } from '../services/auth.service';
+import { AuthService } from "../services/auth.service";
 
 @Component({
   selector: "app-home",
@@ -29,5 +32,4 @@ export class HomePage {
   login() {
     console.log(this.email + this.password);
   }
-
 }

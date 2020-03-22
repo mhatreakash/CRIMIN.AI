@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AlertController, NavController } from "@ionic/angular";
-import { AuthService } from '../services/auth.service';
+import { AuthService } from "../services/auth.service";
 
 @Component({
   selector: "app-sign-up-form",
@@ -16,8 +16,9 @@ export class SignUpFormPage implements OnInit {
 
   constructor(
     public alertController: AlertController,
-    public NavCtrl: NavController
-  ) { }
+    public NavCtrl: NavController,
+    private authservice:AuthService
+  ) {}
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
@@ -45,9 +46,9 @@ export class SignUpFormPage implements OnInit {
     await alert.present();
   }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
-  nextPage() {
-
+  signUp(){
+    this.authservice.SignUp(this.emails,this.password,this.department,this.username);
   }
 }

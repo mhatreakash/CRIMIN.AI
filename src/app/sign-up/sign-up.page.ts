@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { AngularFirestore } from '@angular/fire/firestore';
 import { NavController } from "@ionic/angular";
 
 @Component({
@@ -8,10 +7,7 @@ import { NavController } from "@ionic/angular";
   styleUrls: ["./sign-up.page.scss"]
 })
 export class SignUpPage implements OnInit {
-  constructor(
-    private fireStore: AngularFirestore,
-    public NavCtrl: NavController
-  ) {}
+  constructor(public NavCtrl: NavController) {}
 
   toSignUpForm() {
     this.NavCtrl.navigateForward("/sign-up-form");
