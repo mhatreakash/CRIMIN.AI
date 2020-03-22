@@ -36,7 +36,10 @@ export class AuthService {
     return this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(result => {
-        this.router.navigate(["dashboard"]);
+        this.ngZone.run(() => {
+          this.router.navigate(["dashboard"]);
+        });
+      })
       .catch(error => {
         window.alert(error.message);
       });
@@ -58,21 +61,22 @@ export class AuthService {
       });
   }
 
-  // SendVerificationMail() {
-  //   return this.afAuth.auth.currentUser.sendEmailVerification().then(() => {
-  //     this.router.navigate(["verify-email-address"]);
-  //   });
-  // }
+  SendVerificationMail() {
+    return this.afAuth.auth.currentUser.sendEmailVerification().then(() => {
+      this.router.navigate(["verify-email-address"]);
+    });
+  }
 
   SetUserData(user) {
+    console.log(user);
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(
       `users/${user.uid}`
     );
     const userData: User = {
       uid: user.uid,
       email: user.email,
-      department:user.department,
-      username:user.username
+      department: user.department,
+      username: user.username
     };
     return userRef.set(userData, {
       merge: true
@@ -83,8 +87,9 @@ export class AuthService {
     return this.afAuth.auth
       .signInWithPopup(provider)
       .then(result => {
-        this.router.navigate(["dashboard"]);
-    
+        this.ngZone.run(() => {
+          this.router.navigate(["dashboard"]);
+        });
         this.SetUserData(result.user);
       })
       .catch(error => {
