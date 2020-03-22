@@ -16,8 +16,7 @@ export class SignUpFormPage implements OnInit {
 
   constructor(
     public alertController: AlertController,
-    public NavCtrl: NavController,
-    public authService: AuthService
+    public NavCtrl: NavController
   ) { }
 
   async presentAlertConfirm() {

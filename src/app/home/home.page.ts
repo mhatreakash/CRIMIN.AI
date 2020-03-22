@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { AngularFirestore } from "angularfire2/firestore";
+import { AngularFirestore } from '@angular/fire/firestore';
 import { NavController } from "@ionic/angular";
 import { AuthService } from '../services/auth.service';
 
