@@ -1,0 +1,21 @@
+$fontcolor1:#fff;
+$fontfam1:"Courier New", Courier, monospace;
+
+.profile-header {
+  height: 150px;
+  background-color: #9edbca;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.font-head {
+  color: $fontcolor1;
+  font-size: 25px;
+  font-weight: normal;
+  font-family: $fontfam1;
+  padding-top: 30px;
+}
+
+.icons{
+    color: $fontcolor1;
+}
