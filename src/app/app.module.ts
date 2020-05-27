@@ -13,6 +13,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { environment } from "../environments/environment";
 import {  AngularFireAuthModule } from '@angular/fire/auth';
+import { UiComponent2Page } from './ui-component2/ui-component2.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,10 +22,11 @@ import {  AngularFireAuthModule } from '@angular/fire/auth';
   imports: [
     BrowserModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebase, "CRIME-BOT"),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,

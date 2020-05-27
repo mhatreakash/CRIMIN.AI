@@ -4,15 +4,15 @@
 
 export const environment = {
   production: false,
-  firebase:{
-    apiKey: "AIzaSyC7S6KG6fR8eN6mv0c2lUlsiKDyelwchOs",
-    authDomain: "crime-bot-ai.firebaseapp.com",
-    databaseURL: "https://crime-bot-ai.firebaseio.com",
-    projectId: "crime-bot-ai",
-    storageBucket: "crime-bot-ai.appspot.com",
-    messagingSenderId: "640197175280",
-    appId: "1:640197175280:web:8e4fefddd117b10e859f35",
-    measurementId: "G-M3E54G67MB"
+  firebase: {
+    apiKey: "AIzaSyC3-Axawd5FAef0WmbOrqnnjOXIk8DFEho",
+    authDomain: "chatbot-rektta.firebaseapp.com",
+    databaseURL: "https://chatbot-rektta.firebaseio.com",
+    projectId: "chatbot-rektta",
+    storageBucket: "chatbot-rektta.appspot.com",
+    messagingSenderId: "92583685799",
+    appId: "1:92583685799:web:664eb197d32c8fec9d7582",
+    measurementId: "G-VYZLMFGCC0"
   }
 };
 
