@@ -4,23 +4,24 @@ import { auth } from "firebase/app";
 import { AngularFireAuth } from "@angular/fire/auth";
 import {
   AngularFirestore,
-  AngularFirestoreDocument
+  AngularFirestoreDocument,
 } from "@angular/fire/firestore";
 import { Router } from "@angular/router";
+import { AngularFireDatabase } from "@angular/fire/database";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class AuthService {
   userData: any;
 
   constructor(
-    public afs: AngularFirestore,
+    private db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
     public router: Router,
     public ngZone: NgZone
   ) {
-    this.afAuth.authState.subscribe(user => {
+    this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
         localStorage.setItem("user", JSON.stringify(this.userData));
@@ -35,12 +36,12 @@ export class AuthService {
   SignIn(email, password) {
     return this.afAuth.auth
       .signInWithEmailAndPassword(email, password)
-      .then(result => {
+      .then((result) => {
         this.ngZone.run(() => {
           this.router.navigate(["dashboard"]);
         });
       })
-      .catch(error => {
+      .catch((error) => {
         window.alert(error.message);
       });
   }
@@ -48,7 +49,7 @@ export class AuthService {
   SignUp(email, password, department, username) {
     return this.afAuth.auth
       .createUserWithEmailAndPassword(email, password)
-      .then(result => {
+      .then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign 
             up and returns promise */
         // this.SendVerificationMail();
@@ -56,7 +57,7 @@ export class AuthService {
         result.user["username"] = username;
         this.SetUserData(result.user);
       })
-      .catch(error => {
+      .catch((error) => {
         window.alert(error.message);
       });
   }
@@ -69,30 +70,27 @@ export class AuthService {
 
   SetUserData(user) {
     console.log(user);
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(
-      `users/${user.uid}`
-    );
-    const userData: User = {
-      uid: user.uid,
+
+    const userData = {
       email: user.email,
       department: user.department,
-      username: user.username
+      username: user.username,
+      isAdmin: false,
     };
-    return userRef.set(userData, {
-      merge: true
-    });
+
+    return this.db.list("users").push(userData);
   }
 
   AuthLogin(provider) {
     return this.afAuth.auth
       .signInWithPopup(provider)
-      .then(result => {
+      .then((result) => {
         this.ngZone.run(() => {
           this.router.navigate(["dashboard"]);
         });
         this.SetUserData(result.user);
       })
-      .catch(error => {
+      .catch((error) => {
         window.alert(error);
       });
   }

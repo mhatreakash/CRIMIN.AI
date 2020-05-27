@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 
+
 import { Platform, ToastController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+
+class User {
+  constructor(public name) { }
+}
+
 
 @Component({
   selector: 'app-root',
@@ -15,7 +21,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private toastController: ToastController
-  ) {
+  ) 
+  {
     this.initializeApp();
   }
 
@@ -26,9 +33,6 @@ export class AppComponent {
     });
   }
 
-  report() {
-    this.showToast("Report clicked");
-  }
 
   spotRagging() {
     this.showToast("Sport Ragging clicked");

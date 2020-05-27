@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="medium">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,16 +7,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col class="profile-header">
-        <div class="font-head">Anuradha Date</div>
-        <div><ion-icon name="mail" class="icons"></ion-icon
-          ><a href="mailto:anuradha.date@spit.ac.in">
-            anuradha.date@spit.ac.in</a
-          ></div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-content class='profile-body'>
+  <ion-fab
+    vertical="bottom"
+    horizontal="end"
+    slot="fixed"
+    style="padding-right: 20px;margin-bottom: 30px;"
+  >
+    <ion-fab-button color="medium">
+      <ion-icon name="chatbubbles"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  
 </ion-content>

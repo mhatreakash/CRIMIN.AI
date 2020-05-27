@@ -1,8 +1,4 @@
 import { Component } from "@angular/core";
-import {
-  AngularFirestore,
-  AngularFirestoreModule
-} from "@angular/fire/firestore";
 import { NavController } from "@ionic/angular";
 import { AuthService } from "../services/auth.service";
 
@@ -17,16 +13,10 @@ export class HomePage {
   password;
 
   constructor(
-    private fireStore: AngularFirestore,
     public NavCtrl: NavController,
     public authService: AuthService
   ) {
-    fireStore
-      .collection("UserDetails")
-      .valueChanges()
-      .subscribe(data => {
-        this.userDoc = data;
-      });
+  
   }
 
   login() {

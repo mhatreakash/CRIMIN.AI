@@ -1,11 +1,34 @@
-$fontcolor1:#fff;
-$fontfam1:"Courier New", Courier, monospace;
+$fontcolor1: #fff;
+$fontfam1: "Courier New", Courier, monospace;
 
 .profile-header {
-  height: 150px;
+  height: 120px;
   background-color: #9edbca;
   text-align: center;
   border-radius: 5%;
+}
+.profile-body {
+  --background: url("./../../assets/images/Capture.JPG") 0 0/100% 100% no-repeat; // this is for whole UI for ioncontent got it
+}
+
+ion-icon[name="person-add-outline"] {
+  justify-self: end;
+  align-self: center;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+ion-fab {
+  color:medium;
+}
+ion-fab > ion-fab-button {
+  margin: 0 auto;
+  color:medium;
+}
+
+ion-fab-button {
+  height: 40px;
+  width: 40px;
 }
 
 .font-head {
@@ -16,6 +39,6 @@ $fontfam1:"Courier New", Courier, monospace;
   padding-top: 30px;
 }
 
-.icons{
-    color: $fontcolor1;
+.icons {
+  color: $fontcolor1;
 }

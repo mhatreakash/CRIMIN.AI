@@ -1,20 +1,13 @@
 <ion-app>
   <ion-menu contentId="content1">
     <ion-header>
-      <ion-toolbar color="light">
+      <ion-toolbar>
         <ion-title style="letter-spacing: 1px;">Options</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list style="margin-top: 1rem;">
         <ion-menu-toggle auto-hide="false">
-          <ion-item (click)="report()">
-            <ion-icon
-              src="./../assets/icon/document.svg"
-              class="ion-icon-class"
-            ></ion-icon>
-            <ion-label class="ion-label-class">Report</ion-label>
-          </ion-item>
           <ion-item (click)="spotRagging()">
             <ion-icon
               src="./../assets/icon/eye.svg"
