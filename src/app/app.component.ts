@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { Platform, ToastController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { NavController } from "@ionic/angular";
 
 class User {
   constructor(public name) { }
@@ -20,7 +21,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private toastController: ToastController
+    private toastController: ToastController,
+    public NavCtrl: NavController
   ) 
   {
     this.initializeApp();
@@ -35,16 +37,24 @@ export class AppComponent {
 
 
   spotRagging() {
+    this.NavCtrl.navigateForward("/spot-ragging");
     this.showToast("Sport Ragging clicked");
   }
 
   prevention() {
+    
+    this.NavCtrl.navigateForward("/preventions");
     this.showToast("Prevention clicked");
+  }
+
+  dashboard(){
+    this.NavCtrl.navigateForward("/dashboard");
+    this.showToast("Dashboard clicked");
   }
 
   async showToast(message) {
     const toast = await this.toastController.create({
-      color: "warning",
+      color: "medium",
       message: message,
       duration: 700
     });
