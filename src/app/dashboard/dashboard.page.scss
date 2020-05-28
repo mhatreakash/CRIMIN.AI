@@ -7,9 +7,9 @@ $fontfam1: "Courier New", Courier, monospace;
   text-align: center;
   border-radius: 5%;
 }
-.profile-body {
-  --background: url("./../../assets/images/Capture.JPG") 0 0/100% 100% no-repeat; // this is for whole UI for ioncontent got it
-}
+// .profile-body {
+//   --background: url("./../../assets/images/Capture.JPG") 0 0/100% 100% no-repeat; // this is for whole UI for ioncontent got it
+// }
 
 ion-icon[name="person-add-outline"] {
   justify-self: end;
@@ -27,8 +27,8 @@ ion-fab > ion-fab-button {
 }
 
 ion-fab-button {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
 }
 
 .font-head {
