@@ -60,4 +60,5 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   intentMap.set('Default Fallback Intent', fallback);
   intentMap.set('FileReport', fileReportHandler);
   agent.handleRequest(intentMap);
+  
 });
