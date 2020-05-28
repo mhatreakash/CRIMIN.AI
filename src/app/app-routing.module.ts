@@ -28,7 +28,15 @@ const routes: Routes = [
   {
     path: 'test',
     loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+  },  {
+    path: 'preventions',
+    loadChildren: () => import('./preventions/preventions.module').then( m => m.PreventionsPageModule)
+  },
+  {
+    path: 'spot-ragging',
+    loadChildren: () => import('./spot-ragging/spot-ragging.module').then( m => m.SpotRaggingPageModule)
   }
+
 
 ];
 
