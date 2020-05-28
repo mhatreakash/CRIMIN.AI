@@ -1,6 +1,10 @@
 $fontcolor1: #fff;
 $fontfam1: "Courier New", Courier, monospace;
 
+ion-toolbar{
+  --background:#9edbca;
+}
+
 .profile-header {
   height: 120px;
   background-color: #9edbca;
