@@ -1,11 +1,20 @@
 ion-button {
   letter-spacing: 2px;
+  color: floralwhite;
 }
 
 .invalid {
   border-bottom: 1px solid red;
 }
 
-ion-header ion-toolbar{
-  --background:#9edbca;
+h4 {
+  color: #000000;
+}
+
+ion-content {
+  background: #d0fffd;
+}
+
+a {
+  color: #519657;
 }
