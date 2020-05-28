@@ -3,6 +3,8 @@ $fontfam1: "Courier New", Courier, monospace;
 
 ion-toolbar{
   --background:#9edbca;
+  color: #000000;
+  // letter-spacing: 1px;
 }
 
 .profile-header {
@@ -11,9 +13,9 @@ ion-toolbar{
   text-align: center;
   border-radius: 5%;
 }
-// .profile-body {
-//   --background: url("./../../assets/images/Capture.JPG") 0 0/100% 100% no-repeat; // this is for whole UI for ioncontent got it
-// }
+.profile-body {
+  --background: url("./../../assets/images/Capture.JPG") 0 0/100% 100% no-repeat; // this is for whole UI for ioncontent got it
+}
 
 ion-icon[name="person-add-outline"] {
   justify-self: end;
@@ -26,7 +28,7 @@ ion-fab {
   color:medium;
 }
 ion-fab > ion-fab-button {
-  margin: 0 auto;
+  margin:  auto;
   color:medium;
 }
 

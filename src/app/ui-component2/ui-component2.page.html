@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="dashboard"></ion-back-button>
+    </ion-buttons>
     <ion-title>Chatbot</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,13 +14,13 @@
         <div class="message sent" *ngIf="chat.sender === 'You'">
           {{chat.text}}
           <span class="metadata">
-            <span class="time">{{chat.date | date: 'HH:mm aaa'}}</span>
+            <span class="time">You {{chat.date | date: 'HH:mm aaa'}}</span>
           </span>
         </div>
         <div class="message received" *ngIf="chat.sender =='Bot'">
           {{chat.text}}
           <span class="metadata">
-            <span class="time">{{chat.date | date: 'HH:mm aaa'}}</span>
+            <span class="time">Bot {{chat.date | date: 'HH:mm aaa'}}</span>
           </span>
         </div>
       </div>

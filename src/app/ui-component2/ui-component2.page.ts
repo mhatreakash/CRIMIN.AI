@@ -51,9 +51,7 @@ export class UiComponent2Page implements OnInit {
       sender: 'You',
       date: new Date()
     });
-    // if(this.content.scrollX) {
-    //   // this.content.scrollToBottom(200);
-    // }
+    // this.content.scrollToBottom(200);
   }
 
   addBotMessage(text) {
