@@ -1,7 +1,8 @@
 {
   "name": "CRIMIN.AI",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
