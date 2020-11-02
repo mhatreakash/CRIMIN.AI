@@ -78,24 +78,27 @@ tool-bar{
     margin: 16px 0 8px;
 }
 .message.received {
-    background: #98ee99;
+    background:#30abab;
     border-radius: 0px 5px 5px 5px;
     float: left;
+    color: white;
 }
 .message.received:after {
     border-width: 0px 10px 10px 0;
-    border-color: transparent #98ee99 transparent transparent;
+    border-color: transparent #30abab transparent transparent;
     top: 0;
     left: -10px;
+    color: white;
 }
 .message.sent {
-    background: #64ffda;
+    background: #95f3f3;
     border-radius: 5px 0px 5px 5px;
     float: right;
+   
 }
 .message.sent:after {
     border-width: 0px 0 10px 10px;
-    border-color: transparent transparent transparent #64ffda;
+    border-color: transparent transparent transparent #95f3f3;
     top: 0;
     right: -10px;
 }
@@ -105,7 +108,7 @@ tool-bar{
 
 .message-input{
     width: 100%;
-    border: 1px solid #519657;
+    border: 1px solid #30abab;
     border-radius: 10px;
     background: #fff;
     resize: none;

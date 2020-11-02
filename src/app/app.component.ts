@@ -49,7 +49,7 @@ export class AppComponent {
 
   dashboard(){
     this.NavCtrl.navigateForward("/dashboard");
-    this.showToast("Dashboard clicked");
+   
   }
 
   async showToast(message) {

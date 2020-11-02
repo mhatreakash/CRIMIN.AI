@@ -1,11 +1,11 @@
 <ion-header>
-  <ion-toolbar color="medium">
-    <ion-title>Login</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title style="color: white;">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card mode="ios">
+  <ion-card mode="ios" s>
     <form #form="ngForm" (ngSubmit)="login()">
       <ion-grid>
         <ion-row justify-content-center>
@@ -43,7 +43,7 @@
             <div padding>
               <ion-button
                 expand="block"
-                color="medium"
+                color="primary"
                 style="letter-spacing: 2px;"
                 [disabled]="!form.valid"
                 (click)="authService.SignIn(userMail.value, userPwd.value)"
@@ -56,7 +56,7 @@
           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
             <div text-center>
               Don't have an account?
-              <a routerLink="/sign-up"> Sign Up</a>
+              <a routerLink="/sign-up-form" color="primary"> Sign Up</a>
             </div>
           </ion-col>
         </ion-row>

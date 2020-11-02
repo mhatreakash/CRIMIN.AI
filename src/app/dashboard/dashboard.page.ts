@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { UiComponent2Page } from '../ui-component2/ui-component2.page';
 import { TestPage } from '../test/test.page';
 import { Router } from '@angular/router';
+import { NavController } from "@ionic/angular";
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardPage implements OnInit {
 
-  constructor(public router:Router) { }
+  constructor(public router:Router,public NavCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -19,5 +20,13 @@ export class DashboardPage implements OnInit {
   async openChatbot(){
     console.log(123);
     this.router.navigateByUrl('chat');
+  }
+
+  toSpotRagging() {
+    this.NavCtrl.navigateForward("/spot-ragging");
+  }
+
+  toPrevent() {
+    this.NavCtrl.navigateForward("/preventions");
   }
 }

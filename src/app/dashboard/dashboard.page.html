@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="medium">
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,17 +7,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class='profile-body'>
-  <ion-fab
-    vertical="bottom"
-    horizontal="end"
-    slot="fixed"
-    style="padding-right: 20px;margin-bottom: 30px;"
-  >
-    <ion-fab-button color="medium" (click)="openChatbot()">
-      <ion-icon name="chatbubbles"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
+<ion-content>
+  <ion-card style="margin-top: 150px;">
+    <ion-button 
+                expand="block"
+                style="color: primary;"
+                style="letter-spacing: 2px;height: 150px;"
+                (click)="toSpotRagging()">Signs of Ragging
+    </ion-button>
+    <ion-button 
+                expand="block"
+                color="primary"
+                style="letter-spacing: 2px;height: 150px;margin-top: 30px;"
+                (click)="toPrevent()">Ragging Preventions
+    </ion-button>
+  </ion-card>
+      <ion-fab
+        vertical="bottom"
+        horizontal="end"
+        slot="fixed"
+        style="padding-right: 20px;margin-bottom: 30px;"
+      >
+        <ion-fab-button color="primary" (click)="openChatbot()">
+            <ion-icon name="chatbubbles"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
   
 </ion-content>
