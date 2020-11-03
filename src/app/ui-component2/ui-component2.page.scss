@@ -78,24 +78,24 @@ tool-bar{
     margin: 16px 0 8px;
 }
 .message.received {
-    background: #98ee99;
+    background:  #f36767;
     border-radius: 0px 5px 5px 5px;
     float: left;
 }
 .message.received:after {
     border-width: 0px 10px 10px 0;
-    border-color: transparent #98ee99 transparent transparent;
+    border-color: transparent #f36767 transparent transparent;
     top: 0;
     left: -10px;
 }
 .message.sent {
-    background: #64ffda;
+    background: #ba68c8;
     border-radius: 5px 0px 5px 5px;
     float: right;
 }
 .message.sent:after {
     border-width: 0px 0 10px 10px;
-    border-color: transparent transparent transparent #64ffda;
+    border-color: transparent transparent transparent #ba68c8;
     top: 0;
     right: -10px;
 }
@@ -105,7 +105,7 @@ tool-bar{
 
 .message-input{
     width: 100%;
-    border: 1px solid #519657;
+    border: 1px solid #f44336;
     border-radius: 10px;
     background: #fff;
     resize: none;
@@ -130,6 +130,6 @@ ion-toolbar {
 }
 
 ion-title{
-    color: #000000;
+    color: #fff;
     letter-spacing: 1.5px;
 }

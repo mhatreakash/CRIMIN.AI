@@ -3,18 +3,8 @@ $fontfam1: "Courier New", Courier, monospace;
 
 ion-toolbar{
   --background:#9edbca;
-  color: #000000;
+  color: $fontcolor1;
   // letter-spacing: 1px;
-}
-
-.profile-header {
-  height: 120px;
-  background-color: #9edbca;
-  text-align: center;
-  border-radius: 5%;
-}
-.profile-body {
-  --background: url("./../../assets/images/Capture.JPG") 0 0/100% 100% no-repeat; // this is for whole UI for ioncontent got it
 }
 
 ion-icon[name="person-add-outline"] {
@@ -47,4 +37,10 @@ ion-fab-button {
 
 .icons {
   color: $fontcolor1;
+}
+
+.min-max-width {
+        max-width: 150px;
+        max-height: 150px;
+        margin: 0 auto;
 }
