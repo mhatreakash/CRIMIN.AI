@@ -2,10 +2,20 @@ $fontcolor1: #fff;
 $fontfam1: "Courier New", Courier, monospace;
 
 ion-toolbar{
-  --background:#9edbca;
+  --background:#49bac9;
   color: $fontcolor1;
   // letter-spacing: 1px;
 }
+
+img{
+  height: 140px;
+}
+ion-card-content{
+  margin-right: 10px;
+}
+
+
+
 
 ion-icon[name="person-add-outline"] {
   justify-self: end;
@@ -36,7 +46,7 @@ ion-fab-button {
 }
 
 .icons {
-  color: $fontcolor1;
+  color: #49bac9;
 }
 
 .min-max-width {
