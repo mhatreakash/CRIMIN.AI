@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from "@ionic/angular";
 import { Router } from '@angular/router';
+import { AngularFireDatabase } from "@angular/fire/database";
+import { AngularFireAuth } from "@angular/fire/auth";
 
 @Component({
   selector: 'app-profile',
@@ -9,9 +11,24 @@ import { Router } from '@angular/router';
 })
 export class ProfilePage implements OnInit {
 
-  constructor(public router: Router, public NavCtrl: NavController) { }
+  email;
+  department;
+  username;
+  constructor(
+    public NavCtrl: NavController,
+    private db: AngularFireDatabase,
+    public afAuth: AngularFireAuth) { }
 
   ngOnInit() {
+    this.afAuth.user.subscribe(current => {
+      // console.log(current.uid);
+      this.db.object("users/" + current.uid).valueChanges().subscribe(user => {
+        console.log(user);
+        this.email = user["email"];
+        this.department = user["department"];
+        this.username = user["username"];
+      });
+    })
   }
 
   EditProfile() {

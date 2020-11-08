@@ -17,8 +17,8 @@ export class SignUpFormPage implements OnInit {
   constructor(
     public alertController: AlertController,
     public NavCtrl: NavController,
-    private authservice:AuthService
-  ) {}
+    private authservice: AuthService
+  ) { }
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
@@ -46,9 +46,9 @@ export class SignUpFormPage implements OnInit {
     await alert.present();
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  signUp(){
-    this.authservice.SignUp(this.emails,this.password,this.department,this.username);
+  signUp() {
+    this.authservice.SignUp(this.emails, this.password, this.department, this.username);
   }
 }

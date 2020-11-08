@@ -7,10 +7,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="username">
   <ion-card style="height: 180px;width: fit-content;">
     <img style="height: 180px;width: fit-content;" src="../assets/images/bg.jpg">
-    <div class="text-over">Anuradha Date</div>
+    <div class="text-over">{{username}}</div>
   </ion-card>
   <ion-card style="height:350px">
     <ion-row>
@@ -18,14 +18,18 @@
         <ion-item>
           <ion-label>
             <h3>
-              <ion-icon name="mail"></ion-icon
-              ><a href="mailto:anuradha.date@spit.ac.in">
-                anuradha.date@spit.ac.in</a
-              >
+              <ion-icon name="mail"></ion-icon><a>
+                {{email}}</a>
             </h3>
-            <h3><ion-icon name="call"></ion-icon> 2345678732</h3>
-            <h3><ion-icon name="home"></ion-icon> Thane, Mumbai.</h3>
-            <h3><ion-icon name="home"></ion-icon> Department : MCA </h3>
+            <h3>
+              <ion-icon name="call"></ion-icon> 2345678732
+            </h3>
+            <h3>
+              <ion-icon name="home"></ion-icon> Thane, Mumbai.
+            </h3>
+            <h3>
+              <ion-icon name="home"></ion-icon> Department : {{department}}
+            </h3>
           </ion-label>
         </ion-item>
       </ion-col>
