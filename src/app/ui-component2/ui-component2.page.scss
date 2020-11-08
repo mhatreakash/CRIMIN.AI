@@ -78,13 +78,14 @@ tool-bar{
     margin: 16px 0 8px;
 }
 .message.received {
-    background:  #f36767;
+    background:  #49bac9;
     border-radius: 0px 5px 5px 5px;
     float: left;
+    color: white;
 }
 .message.received:after {
     border-width: 0px 10px 10px 0;
-    border-color: transparent #f36767 transparent transparent;
+    border-color: transparent  #49bac9 transparent transparent;
     top: 0;
     left: -10px;
 }
@@ -92,6 +93,7 @@ tool-bar{
     background: #ba68c8;
     border-radius: 5px 0px 5px 5px;
     float: right;
+    color: white;
 }
 .message.sent:after {
     border-width: 0px 0 10px 10px;
@@ -105,7 +107,7 @@ tool-bar{
 
 .message-input{
     width: 100%;
-    border: 1px solid #f44336;
+    border: 1px solid  #49bac9;
     border-radius: 10px;
     background: #fff;
     resize: none;

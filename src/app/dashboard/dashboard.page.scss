@@ -1,21 +1,18 @@
 $fontcolor1: #fff;
 $fontfam1: "Courier New", Courier, monospace;
 
-ion-toolbar{
-  --background:#49bac9;
+ion-toolbar {
+  --background: #49bac9;
   color: $fontcolor1;
   // letter-spacing: 1px;
 }
 
-img{
-  height: 140px;
+img {
+  height: 145px;
 }
-ion-card-content{
+ion-card-content {
   margin-right: 10px;
 }
-
-
-
 
 ion-icon[name="person-add-outline"] {
   justify-self: end;
@@ -25,11 +22,11 @@ ion-icon[name="person-add-outline"] {
 }
 
 ion-fab {
-  color:medium;
+  color: medium;
 }
 ion-fab > ion-fab-button {
-  margin:  auto;
-  color:medium;
+  margin: auto;
+  color: medium;
 }
 
 ion-fab-button {
@@ -50,7 +47,11 @@ ion-fab-button {
 }
 
 .min-max-width {
-        max-width: 150px;
-        max-height: 150px;
-        margin: 0 auto;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 0 auto;
+}
+
+ion-button {
+  display: inline-block;
 }
