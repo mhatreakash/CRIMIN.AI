@@ -1,13 +1,16 @@
 .invalid {
-    border-bottom: 1px solid red;
+  border-bottom: 1px solid red;
 }
-
 
 ion-toolbar {
-    color: #000000;
+  color: #000000;
 }
 
-ion-title{
-    color: #fff;
-    letter-spacing: 1.5px;
+ion-title {
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+ion-item {
+  margin-top: 16px;
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="medium">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="dashboard" style="color: white;"></ion-back-button>
     </ion-buttons>
@@ -8,45 +8,77 @@
 </ion-header>
 
 <ion-content>
-  <ion-card style="height: 180px;width: fit-content;">
-    <img style="height: 180px;width: fit-content;" src="../assets/images/bg.jpg">
-    <div class="text-over">Anuradha Date</div>
-  </ion-card>
-  <ion-card style="height:350px">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="image">
+          <img
+            src=".\assets\images\pngtree-chinese-style-light-red-blush-ink-effect-ppt-background-template-effectlight-image_54552.jpg"
+            style="width:100%; height:100%;"
+          />
+        </div>
+        <div class="image-over">
+          <img
+            src=".\assets\images\displaypic.jpg"
+            style="width:30%; height:30%; border-radius:50%;"
+          />
+        </div>
+      </ion-col>
+    </ion-row>
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-label>
-            <h3>
-              <ion-icon name="mail"></ion-icon
-              ><a href="mailto:anuradha.date@spit.ac.in">
-                anuradha.date@spit.ac.in</a
-              >
-            </h3>
-            <h3><ion-icon name="call"></ion-icon> 2345678732</h3>
-            <h3><ion-icon name="home"></ion-icon> Thane, Mumbai.</h3>
-            <h3><ion-icon name="home"></ion-icon> Department : MCA </h3>
+          <ion-label style="font-weight: bold;font-size: 20px;">
+              Anuradha Date
           </ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
-    <ion-row style="margin-left: 5px;margin-top: 40px;">
-      <ion-col>
-        <div>
-          <ion-button expand="block" color="tertiary" class="ion-text-wrap min-max-width"
-            style="letter-spacing: 3px;height: 80px;width: 150px;" (click)="EditProfile()">Edit Profile
-          </ion-button>
-        </div>
+    <ion-row>
+      <ion-col size="2">
+        <ion-icon  name="mail"></ion-icon>
       </ion-col>
       <ion-col>
-        <div>
-          <ion-button expand="block" color="tertiary" class="ion-text-wrap min-max-width"
-            style="letter-spacing: 2px;height: 80px;width: 150px;vertical-align: top;text-align: center;"
-            (click)="ChangePassword()">Change Password
-          </ion-button>
-        </div>
+        <ion-label>
+          <a  style="font-size: 20px;" href="mailto:anuradha.date@spit.ac.in">
+            anuradha.date@spit.ac.in</a>
+        </ion-label>
       </ion-col>
     </ion-row>
-  </ion-card>
-
+    <ion-row>
+      <ion-col size="2">
+        <ion-icon name="call"></ion-icon>
+      </ion-col>
+      <ion-col style="font-size: 20px;">
+        2345678732
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2">
+        <ion-icon name="home"></ion-icon> 
+      </ion-col>
+      <ion-col style="font-size: 20px;">
+            Thane , Mumbai
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div padding>
+    <ion-button
+      expand="block"
+      color="light"
+      style="letter-spacing: 2px;"
+      (click)="EditProfile()"
+      >Edit Profile</ion-button
+    >
+  </div>
+  <div padding>
+    <ion-button
+      expand="block"
+      color="light"
+      style="letter-spacing: 2px;"
+      (click)="ChangePassword()"
+      >Change Password</ion-button
+    >
+  </div>
+  
 </ion-content>

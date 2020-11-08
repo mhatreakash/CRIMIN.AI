@@ -41,10 +41,15 @@ export class AppComponent {
     this.showToast("Profile clicked");
   }
 
+  Dashboard() {
+    this.NavCtrl.navigateForward("/dashboard");
+    this.showToast("Dashboard clicked");
+  }
+
  
   async showToast(message) {
     const toast = await this.toastController.create({
-      color: "tertiary",
+      color: "medium",
       message: message,
       duration: 700
     });

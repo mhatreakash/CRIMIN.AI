@@ -36,7 +36,7 @@ export class SignUpFormPage implements OnInit {
         {
           text: "Okay",
           handler: () => {
-            this.NavCtrl.navigateForward("/dashboard");
+            this.NavCtrl.navigateForward("/home");
             console.log("Confirm Okay");
           }
         }
@@ -50,5 +50,6 @@ export class SignUpFormPage implements OnInit {
 
   signUp(){
     this.authservice.SignUp(this.emails,this.password,this.department,this.username);
+    this.NavCtrl.navigateForward("/home");
   }
 }
