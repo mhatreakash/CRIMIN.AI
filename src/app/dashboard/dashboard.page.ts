@@ -20,7 +20,6 @@ export class DashboardPage implements OnInit {
   }
 
   async openChatbot() {
-    console.log(123);
     this.router.navigateByUrl('chat');
   }
 
