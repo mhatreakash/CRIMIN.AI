@@ -38,12 +38,10 @@ export class AppComponent {
 
   Profile() {
     this.NavCtrl.navigateForward("/profile");
-    this.showToast("Profile clicked");
   }
 
   Dashboard() {
     this.NavCtrl.navigateForward("/dashboard");
-    this.showToast("Dashboard clicked");
   }
 
  

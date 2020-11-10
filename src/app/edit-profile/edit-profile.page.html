@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="dashboard" style="color: white;"></ion-back-button>
     </ion-buttons>
-    <ion-title>Edit Profile</ion-title>
+    <ion-title>Update Profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -35,18 +35,6 @@
                 [ngClass]="{'invalid': !dept.valid && dept.touched}"
               ></ion-input>
             </ion-item>
-            <ion-item>
-              <ion-input
-                #email="ngModel"
-                [(ngModel)]="emails"
-                type="text"
-                placeholder="Email"
-                name="email"
-                required
-                email
-                [ngClass]="{'invalid': !email.valid && email.touched}"
-              ></ion-input>
-            </ion-item>
           </ion-list>
         </ion-col>
       </ion-row>
@@ -59,7 +47,7 @@
             style="letter-spacing: 2px;"
             [disabled]="f.invalid"
             (click)="Edit()"
-            >Edit
+            ><b>Update</b>
           </ion-button>
         </ion-col>
       </ion-row>
