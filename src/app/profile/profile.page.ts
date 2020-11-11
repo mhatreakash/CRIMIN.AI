@@ -14,6 +14,7 @@ export class ProfilePage implements OnInit {
   email;
   department;
   username;
+  imageUrl;
   constructor(
     public NavCtrl: NavController,
     private db: AngularFireDatabase,
@@ -27,6 +28,7 @@ export class ProfilePage implements OnInit {
         this.email = user["email"];
         this.department = user["department"];
         this.username = user["username"];
+        this.imageUrl = user["imageUrl"];
       });
     })
   }

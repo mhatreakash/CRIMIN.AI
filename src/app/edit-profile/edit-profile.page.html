@@ -14,30 +14,18 @@
         <ion-col>
           <ion-list style="margin-right: 10px;">
             <ion-item>
-              <ion-input
-                #usernames="ngModel"
-                [(ngModel)]="username"
-                name="username"
-                type="text"
-                placeholder="Username"
-                required
-                [ngClass]="{'invalid': !usernames.valid && usernames.touched}"
-              ></ion-input>
+              <ion-input #usernames="ngModel" [(ngModel)]="username" name="username" type="text" placeholder="Username"
+                required [ngClass]="{'invalid': !usernames.valid && usernames.touched}"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input
-                #dept="ngModel"
-                [(ngModel)]="department"
-                type="text"
-                placeholder="Department"
-                name="dept"
-                required
-                [ngClass]="{'invalid': !dept.valid && dept.touched}"
-              ></ion-input>
+              <ion-input #dept="ngModel" [(ngModel)]="department" type="text" placeholder="Department" name="dept"
+                required [ngClass]="{'invalid': !dept.valid && dept.touched}"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-input placeholder="Upload image"></ion-input>
-              <ion-button slot="end" fill="clear" color="medium" >
+              <input #file style="display:none" placeholder="Upload image" name="image" id="image" type="file"
+                (change)="preview(file.files)" accept="image/*">
+              <label >{{ imageTitle }}</label>
+              <ion-button slot="end" fill="clear" color="medium" (click)="file.click()">
                 <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
               </ion-button>
             </ion-item>
@@ -47,17 +35,11 @@
 
       <ion-row style="margin-top: 16px;">
         <ion-col class="signup-col">
-          <ion-button
-            expand="block"
-            color="light"
-            style="letter-spacing: 2px;"
-            [disabled]="f.invalid"
-            (click)="Edit()"
-            ><b>Update</b>
+          <ion-button expand="block" color="light" style="letter-spacing: 2px;" (click)="update()">
+            <b>Update</b>
           </ion-button>
         </ion-col>
       </ion-row>
     </form>
   </ion-card>
 </ion-content>
-
